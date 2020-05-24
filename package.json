@@ -1,0 +1,29 @@
+{
+  "name": "employee-template",
+  "version": "1.0.0",
+  "description": "Generates an HTML file for engineer, intern, manager, employee.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/retro1967/employee-template.git"
+  },
+  "author": "Conrad Trost",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/retro1967/employee-template/issues"
+  },
+  "homepage": "https://github.com/retro1967/employee-template#readme",
+  "dependencies": {
+    "inquirer": "^7.1.0",
+    "jes": "^0.6.1"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}

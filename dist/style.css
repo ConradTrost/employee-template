@@ -1,0 +1,41 @@
+body {
+    font-family: montserrat, "sans serif";
+}
+
+.navbar {
+    background-color: rgb(63, 63, 173);
+    height: 140px;
+    color: whitesmoke;
+    text-align: center;
+    justify-content: center;
+}
+
+.team-cards {
+    padding: 40px;
+    justify-content: center;
+    margin: auto;
+}
+
+.card {
+    width: 20%;
+    justify-content: center;
+    margin: 20px;
+}
+
+.card-title {
+    text-align: center;
+    font-weight: 500;
+}
+
+.card-subtitle {
+    border-bottom: 1px solid black;
+    width: 100%;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+.icon {
+    padding-right: 10px;
+}
