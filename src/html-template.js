@@ -25,7 +25,7 @@ const generateEmployeeData = (employee, manager, engineer, intern) => {
                     <div class="card-subtitle"><i class="icon fab fa-black-tie"></i>Manager</div>
                     <p>ID: ${manager[n].id}<br>
                     Email: ${manager[n].email}<br>
-                    Office Number: ${manager[n].office}
+                    Office Number: ${manager[n].officeNum}
                     </p>
                 </div>
             </div>`
