@@ -5,6 +5,8 @@
 
   ## Description
   #### Generate an HTML file to keep track of employee information in a team. This application utilizes Node.js, npm inquirer, and npm jest.
+  
+  ### Video located [here](https://youtu.be/q9Wtg_fVdeE)
 
   ### Table of Contents:
 
