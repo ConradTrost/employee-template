@@ -4,7 +4,7 @@ body {
 
 .navbar {
     background-color: rgb(63, 63, 173);
-    height: 140px;
+    height: 100px;
     color: whitesmoke;
     text-align: center;
     justify-content: center;
@@ -20,6 +20,11 @@ body {
     width: 20%;
     justify-content: center;
     margin: 20px;
+    padding: 0;
+}
+
+.card-body {
+    padding: 0;
 }
 
 .card-title {
@@ -28,14 +33,18 @@ body {
 }
 
 .card-subtitle {
-    border-bottom: 1px solid black;
     width: 100%;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
     justify-content: center;
     text-align: center;
 }
 
 .icon {
     padding-right: 10px;
+}
+
+.card-header {
+    background-color: rgb(63, 63, 173);
+    color: whitesmoke;
+    width: 100%;
+    margin-bottom: 10px;
 }

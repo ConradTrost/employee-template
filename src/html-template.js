@@ -7,12 +7,15 @@ const generateEmployeeData = (manager, engineer, intern) => {
             htmlVar += `
             <div class="manager col-3 card">
                 <div class="card-body">
-                    <h2 class="card-title">${manager[n].name}</h2>
-                    <div class="card-subtitle"><i class="icon fab fa-black-tie"></i>Manager</div>
-                    <p>ID: ${manager[n].id}<br>
-                    Email: <a href="mailto:${manager[n].email}" target="_blank">${manager[n].email}</a><br>
-                    Office Number: ${manager[n].officeNum}
-                    </p>
+                    <div class="card-header">
+                        <h2 class="card-title">${manager[n].name}</h2>
+                        <div class="card-subtitle"><i class="icon fab fa-black-tie"></i>Manager</div>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">ID: ${manager[n].id}</li>
+                        <li class="list-group-item">Email: <a href="mailto:${manager[n].email}" target="_blank">${manager[n].email}</a></li>
+                        <li class="list-group-item">Office Number: ${manager[n].officeNum}</li>
+                    </ul>
                 </div>
             </div>`
         }
@@ -23,12 +26,15 @@ const generateEmployeeData = (manager, engineer, intern) => {
             htmlVar += `
             <div class="engineer col-3 card">
                 <div class="card-body">
-                    <h2 class="card-title">${engineer[n].name}</h2>
-                    <div class="card-subtitle"><i class="icon fas fa-tools"></i></i>Engineer</div>
-                    <p class="card-text">ID: ${engineer[n].id}<br>
-                    Email: <a href="mailto:${engineer[n].email}" target="_blank">${engineer[n].email}</a><br>
-                    Github: <a href="https://github.com/${engineer[n].github}">${engineer[n].github}</a>
-                    </p>
+                    <div class="card-header">
+                        <h2 class="card-title">${engineer[n].name}</h2>
+                        <div class="card-subtitle"><i class="icon fas fa-tools"></i></i>Engineer</div>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">ID: ${engineer[n].id}</li>
+                        <li class="list-group-item">Email: <a href="mailto:${engineer[n].email}" target="_blank">${engineer[n].email}</a></li>
+                        <li class="list-group-item">Github: <a href="https://github.com/${engineer[n].github}">${engineer[n].github}</a></li>
+                    </ul>
                 </div>
             </div>`
         }
@@ -39,12 +45,15 @@ const generateEmployeeData = (manager, engineer, intern) => {
             htmlVar += `
             <div class="intern col-3 card">
                 <div class="card-body">
-                    <h2 class="card-title">${intern[n].name}</h2>
-                    <div class="card-subtitle"><i class="icon fas fa-school"></i>Intern</div>
-                    <p class="card-text">ID: ${intern[n].id}<br>
-                    Email: <a href="mailto:${intern[n].email}" target="_blank">${intern[n].email}</a><br>
-                    School: ${intern[n].school}
-                    </p>
+                    <div class="card-header">
+                        <h2 class="card-title">${intern[n].name}</h2>
+                        <div class="card-subtitle"><i class="icon fas fa-school"></i>Intern</div>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">ID: ${intern[n].id}</li>
+                        <li class="list-group-item">Email: <a href="mailto:${intern[n].email}" target="_blank">${intern[n].email}</a></li>
+                        <li class="list-group-item">School: ${intern[n].school}</li>
+                    </ul>
                 </div>
             </div>`
         }
