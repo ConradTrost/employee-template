@@ -19,7 +19,7 @@
   ![Image](./lib/generator_sc.png)
 
   ## Installation Instructions
-  To install, clone the repository and run `npm install jest --save-dev` and `npm install inquirer` from the command line.
+  To install, clone the repository and run `npm install --save-dev jest` and `npm install inquirer` from the command line.
 
   ## Usage Instructions 
   After installation, run `node index.js` and enter the information from the prompts.
