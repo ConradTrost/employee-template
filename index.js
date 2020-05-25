@@ -1,5 +1,4 @@
 const inquirer = require('inquirer');
-const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
@@ -8,24 +7,6 @@ const fs = require('fs');
 
 const dataArray = [];
 
-const employeePrompt =     
-    [
-        {
-            type: 'text',
-            name: 'name',
-            message: 'What is the employees name?'
-        },
-        {
-            type: 'text',
-            name: 'id',
-            message: 'What is the employees id?'
-        },
-        {
-            type: 'text',
-            name: 'email',
-            message: 'What is the employees email?'
-        }
-];
 
 const managerPrompt =     
     [
@@ -110,7 +91,7 @@ const addAnother = () => {
         {
             type: 'list',
             name: 'employeeType',
-            choices: ['Employee', 'Manager', 'Engineer', 'Intern'],
+            choices: ['Engineer', 'Intern'],
             when: ({ addConfirm }) => addConfirm
         }
     ])
@@ -122,29 +103,15 @@ const addAnother = () => {
 const whichEmployee = type => {
     if(type === 'Manager'){
         promptManagers();
-    } else if(type === 'Employee'){
-        promptEmployees();
     } else if(type === 'Engineer'){
         promptEngineers();
     } else if(type === 'Intern'){
         promtInterns();
     } else {
-        console.log('Thanks for using this employee template. Bye!')
-        // console.log(dataArray);
-        // templateData(dataArray)
-        // templateData(dataArray)
+        console.log('Thanks for using this employee template!')
         writeToFile('./dist/index.html', templateData(dataArray));
-    } // return writeToFile('./dist/index.html', templateData(dataArray));
-}
-
-function promptEmployees() {
-    inquirer.prompt(employeePrompt)
-        .then((data) => {
-            const employee = new Employee(data.name, data.id, data.email);
-            console.log(employee);
-            dataArray.push(employee);
-            addAnother();
-        });
+        console.log('Your file has been generated. Check out ./dist')
+    }
 }
 
 function promptManagers() {
@@ -178,7 +145,7 @@ function promtInterns() {
 }
 
 const init = () => {
-    addAnother();
+    promptManagers();
 }
 
 function writeToFile(filename, data) {
@@ -190,7 +157,7 @@ function writeToFile(filename, data) {
             }
             resolve ({
                 ok: true,
-                message: 'HTML Generated!'
+                message: 'HTML Generated! The file can be found in ./dist'
             })
         })
     })

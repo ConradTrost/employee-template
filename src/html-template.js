@@ -1,21 +1,7 @@
 
-const generateEmployeeData = (employee, manager, engineer, intern) => {
+const generateEmployeeData = (manager, engineer, intern) => {
     htmlVar = ``;
-    
-    if(employee){
-        for(n in employee){
-            htmlVar += `
-            <div class="employee col-3 card">
-                <div class="card-body">
-                    <h2 class="card-title">${employee[n].name}</h2>
-                    <div class="card-subtitle"><i class="icon fas fa-briefcase"></i>Employee</div>
-                    <p>ID: ${employee[n].id}<br>
-                    Email: ${employee[n].email}<br>
-                    </p>
-                </div>
-            </div>`
-    }
-}
+
     if(manager) {
         for(n in manager){
             htmlVar += `
@@ -24,7 +10,7 @@ const generateEmployeeData = (employee, manager, engineer, intern) => {
                     <h2 class="card-title">${manager[n].name}</h2>
                     <div class="card-subtitle"><i class="icon fab fa-black-tie"></i>Manager</div>
                     <p>ID: ${manager[n].id}<br>
-                    Email: ${manager[n].email}<br>
+                    Email: <a href="mailto:${manager[n].email}" target="_blank">${manager[n].email}</a><br>
                     Office Number: ${manager[n].officeNum}
                     </p>
                 </div>
@@ -40,7 +26,7 @@ const generateEmployeeData = (employee, manager, engineer, intern) => {
                     <h2 class="card-title">${engineer[n].name}</h2>
                     <div class="card-subtitle"><i class="icon fas fa-tools"></i></i>Engineer</div>
                     <p class="card-text">ID: ${engineer[n].id}<br>
-                    Email: ${engineer[n].email}<br>
+                    Email: <a href="mailto:${engineer[n].email}" target="_blank">${engineer[n].email}</a><br>
                     Github: <a href="https://github.com/${engineer[n].github}">${engineer[n].github}</a>
                     </p>
                 </div>
@@ -56,7 +42,7 @@ const generateEmployeeData = (employee, manager, engineer, intern) => {
                     <h2 class="card-title">${intern[n].name}</h2>
                     <div class="card-subtitle"><i class="icon fas fa-school"></i>Intern</div>
                     <p class="card-text">ID: ${intern[n].id}<br>
-                    Email: ${intern[n].email}<br>
+                    Email: <a href="mailto:${intern[n].email}" target="_blank">${intern[n].email}</a><br>
                     School: ${intern[n].school}
                     </p>
                 </div>
@@ -69,16 +55,13 @@ const generateEmployeeData = (employee, manager, engineer, intern) => {
 module.exports = templateData => {
 
     const data = templateData;
-    const employee = [];
     const manager = [];
     const engineer = [];
     const intern = [];
 
     // Returns employee type based on role in all index of array
     for(n in data){
-        if(data[n].role === 'Employee'){
-            employee.push(data[n]);
-        } else if(data[n].role === 'Manager'){
+        if(data[n].role === 'Manager'){
             manager.push(data[n]);
         } else if(data[n].role === 'Engineer'){
             engineer.push(data[n]);
@@ -106,7 +89,7 @@ module.exports = templateData => {
             </div>
         </header>
 
-        <section class="team-cards row container">${generateEmployeeData(employee, manager, engineer, intern)}</section>
+        <section class="team-cards row container">${generateEmployeeData(manager, engineer, intern)}</section>
     </body>
 
     </html>
