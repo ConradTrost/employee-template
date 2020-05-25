@@ -16,6 +16,8 @@
   **[License](#license)**<br>
   **[Questions](#questions)**<br>
 
+  ![Image](./lib/generator_sc.png)
+
   ## Installation Instructions
   To install, clone the repository and run `npm install jest --save-dev` and `npm install inquirer` from the command line.
 
