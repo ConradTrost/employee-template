@@ -33,7 +33,7 @@ const generateEmployeeData = (manager, engineer, intern) => {
                     <ul class="list-group">
                         <li class="list-group-item">ID: ${engineer[n].id}</li>
                         <li class="list-group-item">Email: <a href="mailto:${engineer[n].email}" target="_blank">${engineer[n].email}</a></li>
-                        <li class="list-group-item">Github: <a href="https://github.com/${engineer[n].github}">${engineer[n].github}</a></li>
+                        <li class="list-group-item">Github: <a href="https://github.com/${engineer[n].github}" target="_blank">${engineer[n].github}</a></li>
                     </ul>
                 </div>
             </div>`
